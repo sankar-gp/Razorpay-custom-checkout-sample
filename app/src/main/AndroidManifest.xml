@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <meta-data
-            android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_ChJV4hB65XTlUg" />
-<!--            android:value="rzp_live_ILgsfZCZoFIKMb" />-->
+<!--        <meta-data-->
+<!--            android:name="com.razorpay.ApiKey"-->
+<!--            android:value="rzp_test_ChJV4hB65XTlUg" />-->
+<!--&lt;!&ndash;            android:value="rzp_live_ILgsfZCZoFIKMb" />&ndash;&gt;-->
 
         <activity android:name=".PaymentActivity">
             <intent-filter>

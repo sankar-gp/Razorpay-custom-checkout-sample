@@ -31,9 +31,7 @@ class PaymentOptions : Activity(), PaymentResultListener {
     var payload = JSONObject("{currency:'INR'}")
     val context = this
 
-
     val TAG: String = PaymentOptions::class.toString()
-
 
     private class MethodSelected : View.OnClickListener {
         override fun onClick(p0: View?) {
@@ -372,22 +370,6 @@ class PaymentOptions : Activity(), PaymentResultListener {
         Toast.makeText(this@PaymentOptions, "Payment Successful: $rzpPaymentId",Toast.LENGTH_LONG).show()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

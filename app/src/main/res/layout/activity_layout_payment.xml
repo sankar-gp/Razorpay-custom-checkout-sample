@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#00b1e1"
-                android:id="@+id/theMainMagicView">
-
-    <FrameLayout
+    android:id="@+id/theMainMagicView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerInParent="true"
-    >
+    android:background="#00b1e1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
         <LinearLayout
+            android:id="@+id/outerbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:id="@+id/outerbox"
-            android:gravity="center">
+            android:paddingRight="20dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -27,17 +27,17 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
-                    android:background="#E2E2E2"
-                    android:layout_alignParentBottom="true">
+                    android:layout_alignParentBottom="true"
+                    android:background="#E2E2E2">
 
                     <TextView
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
+                        android:id="@+id/orderid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Order #RZP42"
-                        android:id="@+id/orderid"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
                         android:paddingBottom="2dp"
+                        android:text="Order #RZP42"
                         android:textSize="12sp" />
                 </RelativeLayout>
 
@@ -53,14 +53,14 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_height="wrap_content"
+                android:id="@+id/innerbox"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f2f2f2"
+                android:gravity="center"
                 android:orientation="vertical"
                 android:paddingTop="15dp"
-                android:paddingBottom="20dp"
-                android:gravity="center"
-                android:id="@+id/innerbox"
-                android:background="#f2f2f2">
+                android:paddingBottom="20dp">
 
                 <TextView
                     android:id="@+id/otpValue"
@@ -73,67 +73,42 @@
                     android:textSize="20sp" />
 
                 <TextView
+                    android:id="@+id/sender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="INR 1.00"
-                    android:id="@+id/sender"
+                    android:layout_gravity="center_horizontal"
                     android:paddingTop="0dp"
                     android:paddingBottom="0dp"
-                    android:textSize="12sp"
-                    android:layout_gravity="center_horizontal" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="This is a real transaction"
-                    android:id="@+id/warning"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="0dp"
-                    android:textSize="12sp"
-                    android:textStyle="italic"
-                    android:layout_gravity="center_horizontal" />
+                    android:text="INR 1.00"
+                    android:textSize="12sp" />
 
                 <Button
+                    android:id="@+id/pay_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Purchase"
-                    android:id="@+id/pay_btn"
-                    android:textSize="14sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/green_button"
-                    android:textColor="#fcfcfc"
-                    android:paddingRight="20dp"
                     android:paddingLeft="20dp"
                     android:paddingTop="7dp"
-                    android:paddingBottom="7dp" />
+                    android:paddingRight="20dp"
+                    android:paddingBottom="7dp"
+                    android:text="Purchase"
+                    android:textColor="#fcfcfc"
+                    android:textSize="14sp" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Secure Payments by Razorpay"
-                android:id="@+id/securedpayments"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_marginTop="20dp"
-                android:textSize="12sp"
-                android:textColor="#a1ddee"
-                android:textStyle="italic"
-                android:background="@drawable/secured_by_bg"/>
         </LinearLayout>
+
         <WebView
             android:id="@+id/payment_webview"
-            android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
         </WebView>
 
     </FrameLayout>
-
 
 
 </RelativeLayout>
